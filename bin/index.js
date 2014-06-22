@@ -3,7 +3,7 @@ var app = require('commander');
 var chalk = require('chalk');
 var dhs = require('../lib');
 var pkg = require('../package');
-var sep = ' ' + ((new Array(47)).join('-'));
+var sep = ' ' + ((new Array(50)).join('='));
 
 app
   .version(pkg.version)
@@ -11,24 +11,24 @@ app
   .parse(process.argv);
 
 function banner() {
-  console.log([
-    ' ==============================================', '\n',
-    '           Docker registry search', '\n',
-    ' ==============================================', '\n',
-  ].join(''));
+  console.log(chalk.magenta([
+    sep, '\n',
+    '              Docker registry search', '\n',
+    sep, '\n',
+  ].join('')));
 }
 
 function searchHandler(err, result) {
   banner();
 
-  console.log(' Total of %s founded!', chalk.blue(result.length));
-  console.log(sep);
-  console.log();
-
   function resultMapHandler(item) {
-    console.log(' [ %s ] - %s\n', chalk.blue(item.href), item.title);
+    console.log(' [ %s ] - FROM %s\n', chalk.blue(item.href), chalk.cyan(' ' + item.title + ' '));
   }
   result.map(resultMapHandler);
+
+  console.log(chalk.magenta(sep));
+  console.log(chalk.magenta(' Total of %s'), chalk.cyan(result.length));
+  console.log();
 }
 
 if (app.search) {
