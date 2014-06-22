@@ -4,11 +4,15 @@ Simple tool to scrap from docker registry and search images direct in the termin
 
 # Installation
 
+```
   [sudo] npm i -g dhs
+```
 
 # Usage
 
+```
   [sudo] dhs -s [keyword]
+```
 
 # Contribution
 
@@ -18,10 +22,13 @@ Under ICS feel free to modify and improve.
 
 ## Calling
 
+```javascript
   var dhs = require('dhs');
+``` 
 
 ## Search
 
+```javascript
   dhs.search('ubuntu', function (err, result) {
     // do something with the list of results
     // [{
@@ -29,5 +36,6 @@ Under ICS feel free to modify and improve.
     //    href: 'string'
     // }]
   });
+```
 
 *.*
