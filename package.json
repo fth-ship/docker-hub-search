@@ -14,6 +14,7 @@
   "author": "kaique.developer@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^0.4.0",
     "commander": "^2.2.0",
     "jsdom": "^0.11.0",
     "superagent": "^0.18.0"

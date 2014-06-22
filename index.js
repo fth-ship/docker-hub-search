@@ -20,12 +20,12 @@ function banner() {
 function searchHandler(err, result) {
   banner();
 
-  console.log(' Total of %s founded!', result.length);
+  console.log(' Total of %s founded!', chalk.blue(result.length));
   console.log(sep);
   console.log();
 
   function resultMapHandler(item) {
-    console.log(' [ %s ] - %s\n', chalk.green(item.href), item.title);
+    console.log(' [ %s ] - %s\n', chalk.blue(item.href), item.title);
   }
   result.map(resultMapHandler);
 }
