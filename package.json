@@ -1,6 +1,6 @@
 {
   "name": "dhs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple search tool for docker hub",
   "main": "lib/index.js",
   "bin": "bin/index.js",
