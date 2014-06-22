@@ -2,7 +2,8 @@
   "name": "dhs",
   "version": "0.0.1",
   "description": "Simple search tool for docker hub",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "bin": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
